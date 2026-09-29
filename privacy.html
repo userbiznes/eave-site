@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy · Eave for Mac</title>
+<meta name="description" content="What Eave keeps on your Mac, when it uses the internet, and what it sends.">
+<meta name="theme-color" content="#2F3652">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+  :root {
+    --cream: #EFE6D6;
+    --paper: #F7F1E6;
+    --navy: #2F3652;
+    --navy-deep: #262C45;
+    --ink: #2F3652;
+    --ink-soft: #595E78;
+    --clay: #B9765A;
+    --line: rgba(47, 54, 82, 0.14);
+    --serif: 'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+    --sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --mono: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  }
+  html { background: var(--cream); -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font: 400 17px/1.6 var(--sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; border-radius: 4px; }
+
+  .bar {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    max-width: 1180px; margin: 0 auto; box-sizing: border-box;
+    padding: 18px clamp(16px, 4vw, 40px);
+    border-bottom: 1px solid var(--line);
+  }
+  .brand { font: 400 26px/1 var(--serif); letter-spacing: -0.01em; text-decoration: none; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 16px; border-radius: 999px;
+    background: var(--navy); color: var(--cream);
+    font: 500 14px/1 var(--sans); text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn:hover { background: var(--navy-deep); transform: translateY(-1px); }
+  .btn svg { width: 16px; height: 16px; flex: none; }
+
+  main {
+    max-width: 700px; margin: 0 auto; box-sizing: border-box;
+    padding: clamp(40px, 8vw, 80px) clamp(16px, 5vw, 48px) 72px;
+  }
+  h1 { margin: 0; font: 400 clamp(44px, 8vw, 64px)/1.05 var(--serif); letter-spacing: -0.015em; }
+  .updated { margin: 10px 0 0; font-size: 14px; color: var(--ink-soft); }
+  .lede { margin: 28px 0 0; font-size: 19px; }
+  h2 { margin: 48px 0 12px; font: 400 30px/1.15 var(--serif); }
+  p, li { color: var(--ink-soft); }
+  strong { color: var(--ink); font-weight: 500; }
+  ul { margin: 0; padding-left: 20px; }
+  li + li { margin-top: 12px; }
+  li::marker { color: var(--clay); }
+  code {
+    font: 14px var(--mono);
+    padding: 1px 6px; border-radius: 6px;
+    background: var(--paper); border: 1px solid var(--line);
+    color: var(--ink);
+    overflow-wrap: anywhere;
+  }
+  main a { text-decoration-color: rgba(47, 54, 82, 0.35); text-underline-offset: 3px; }
+  main a:hover { text-decoration-color: currentColor; }
+
+  footer {
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px;
+    max-width: 1180px; margin: 0 auto; box-sizing: border-box;
+    padding: 24px clamp(16px, 4vw, 40px) 40px;
+    border-top: 1px solid var(--line);
+    font-size: 14px; color: var(--ink-soft);
+  }
+  footer nav { display: flex; gap: 20px; }
+  footer a { text-decoration: none; }
+  footer a:hover { color: var(--ink); }
+
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:hover { transform: none; } }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a class="brand" href="./">Eave</a>
+  <a class="btn" href="https://github.com/userbiznes/eave-releases/releases/latest/download/Eave.dmg"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.5v9m0 0L6.4 8.9M10 12.5l3.6-3.6M4 16.5h12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Download</a>
+</header>
+
+<main>
+  <h1>Privacy</h1>
+  <p class="updated">Last updated September 28, 2026</p>
+
+  <p class="lede">Eave is a Mac app made by Ardis USA LLC. It has no accounts, no ads and no analytics, and we don’t sell or share anything about you. This page lists everything Eave keeps on your Mac and every time it talks to the internet.</p>
+
+  <h2>What stays on your Mac</h2>
+  <ul>
+    <li><strong>Clipboard history.</strong> What you copy, kept in <code>~/Library/Application Support/Eave</code> for as long as your retention settings say. Copies from password managers, apps you tell Eave to ignore, and anything the app it came from marks as private or temporary are never read. You can pause it or clear it any time in Settings › Privacy.</li>
+    <li><strong>Files tray.</strong> References to the files you drop on the notch, and copies of files dragged from apps that only offer a copy.</li>
+    <li><strong>Settings, spaces and themes,</strong> and the counts on your member card (songs, tasks, copies).</li>
+    <li><strong>Claude Code.</strong> If you connect it, Claude Code’s status line and three hooks save small files for Eave: your usage limits, and which session is working or finished. Eave never saves what you type to Claude. It reads Claude Code’s own folder (<code>~/.claude</code>) to show your stats. The only thing it changes there is <code>settings.json</code>, and only when you press Connect or Disconnect: it backs the file up first, adds or removes just its status line and hooks, and checks that nothing else changed.</li>
+    <li><strong>Spotify sign-in.</strong> If you set up adding songs to playlists, your sign-in is kept in your Mac’s Keychain.</li>
+  </ul>
+
+  <h2>When Eave uses the internet</h2>
+  <ul>
+    <li><strong>Updates.</strong> Once a day Eave checks GitHub for a new version (you can turn this off in Settings › About). The request says which version of Eave you have and nothing about you; GitHub sees your IP address, as any website would.</li>
+    <li><strong>Your member number.</strong> Once, Eave asks our counter (a Cloudflare Worker) for the next member number, sending only a random code made on your Mac, so asking twice gives the same number. The counter keeps that code and its number, nothing else. Your IP address is used for a minute to stop floods of requests and isn’t stored.</li>
+    <li><strong>Spotify.</strong> Eave controls the Spotify app on your Mac directly and loads album art from Spotify. If you set up adding songs to playlists, Eave talks to Spotify’s Web API with your own Spotify app and sign-in; nothing passes through us.</li>
+    <li><strong>Link previews.</strong> When you copy a link, Eave loads that page’s title and image from the website itself, as your browser would. You can turn this off in Settings › Privacy.</li>
+    <li><strong>Crash reports.</strong> If Eave crashes, it asks the next time it opens whether you’d like to email us the report macOS wrote. It opens in your mail app so you can read it first, and nothing is sent unless you send it.</li>
+    <li><strong>Email.</strong> If you write to us, we use your message only to reply.</li>
+  </ul>
+
+  <h2>Permissions</h2>
+  <p>Eave asks macOS for <strong>Accessibility</strong>, only to paste clipboard items for you, and for <strong>Automation</strong> of Spotify, only to play, pause and skip. You can take either back in System Settings › Privacy &amp; Security.</p>
+
+  <h2>Removing Eave</h2>
+  <p>Disconnect Claude Code in Settings › Connections first, so its settings go back to how they were. Then quit Eave, delete it from Applications, and delete <code>~/Library/Application Support/Eave</code> and <code>~/Library/Preferences/com.ardisusa.eave.plist</code> to remove everything it kept.</p>
+
+  <h2>Questions</h2>
+  <p>Write to <a href="mailto:eave@ardisusa.com">eave@ardisusa.com</a>. If this policy changes, the date above changes with it.</p>
+</main>
+
+<footer>
+  <span>© 2026 Ardis USA LLC</span>
+  <nav aria-label="Footer">
+    <a href="./">Eave</a>
+    <a href="mailto:eave@ardisusa.com">Contact</a>
+  </nav>
+</footer>
+
+</body>
+</html>
