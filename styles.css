@@ -33,6 +33,10 @@
 }
 
 html { background: var(--cream); -webkit-text-size-adjust: 100%; }
+/* No browser scroll bar over the paper scene: the page still scrolls with the trackpad, the
+   wheel and the keys, and the story says where you are. */
+html, body { scrollbar-width: none; }
+html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
 body {
   margin: 0;
   background: var(--cream);
