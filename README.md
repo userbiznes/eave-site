@@ -18,6 +18,12 @@ The Download links (nav, hero, footer button, footer link, and the privacy page'
 `privacy.html` is the privacy policy (its content matches what the app does; change it, and its date, when that
 changes).
 
+## Icons
+
+`favicon.png` (64 px), `favicon.ico` (32 px, for browsers that ask for it by default) and `apple-touch-icon.png`
+(180 px) are the app icon cropped to its rounded square (from `Eave/Assets.xcassets/AppIcon.appiconset` in the app's
+repo, whose `Tools/make-icons.swift` draws it).
+
 ## Hosting
 
 GitHub Pages from this repo (`userbiznes/eave-site`, branch `main`), at `eave.ardisusa.com`: the `CNAME` file names
