@@ -329,25 +329,25 @@ html:not(.js) .opening { display: none; }
   83% { transform: translate(-29px, 46px); }
 }
 
+/* "scroll to open": the tagline's serif in the frame's cream, with a hand-drawn arrow that
+   bobs. Fades in after the opening and out as soon as the page moves (main.js). */
 .hint {
-  position: absolute; left: 50%; bottom: max(12px, 1.8vh);
+  position: absolute; left: 50%; bottom: max(14px, 2.2vh);
   transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: 8px;
-  color: rgba(239, 230, 214, 0.75);
-  font: 500 10.5px/1 var(--sans); letter-spacing: 0.28em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 9px;
+  color: rgba(239, 230, 214, 0.86);
+  font: italic 400 19px/1 var(--serif); letter-spacing: 0.01em;
+  white-space: nowrap;
   opacity: 0; pointer-events: none;
 }
-.hint span { margin-right: -0.28em; }
-.hint i {
-  display: block; width: 1px; height: 20px;
-  background: linear-gradient(rgba(239, 230, 214, 0.8), rgba(239, 230, 214, 0));
-  transform-origin: top;
-  animation: hint 2.4s ease-in-out infinite;
+.hint svg {
+  width: 12px; height: 19px; flex: none;
+  fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;
+  animation: hint 2.2s ease-in-out infinite;
 }
 @keyframes hint {
-  0% { transform: scaleY(0); opacity: 1; }
-  55% { transform: scaleY(1); opacity: 1; }
-  100% { transform: scaleY(1); opacity: 0; }
+  0%, 100% { transform: translateY(-1px); }
+  50% { transform: translateY(3px); }
 }
 
 /* ---------- lead ---------- */
@@ -568,7 +568,7 @@ details[open] .plus::after { transform: rotate(0deg); }
 
 @media (prefers-reduced-motion: reduce) {
   .js .opening { transition: none; }
-  .grain, .fly, .eave-breathe, .hint i, .zz i { animation: none; }
+  .grain, .fly, .eave-breathe, .hint svg, .zz i { animation: none; }
   .fly { display: none; }
   .zz i:first-child { opacity: 0.7; transform: translate(6px, -12px); }
 }
