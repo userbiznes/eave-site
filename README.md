@@ -20,9 +20,9 @@ changes).
 
 ## Icons
 
-`favicon.png` (64 px), `favicon.ico` (32 px, for browsers that ask for it by default) and `apple-touch-icon.png`
-(180 px) are the app icon cropped to its rounded square (from `Eave/Assets.xcassets/AppIcon.appiconset` in the app's
-repo, whose `Tools/make-icons.swift` draws it).
+The favicon is Eave the way this page draws him (`eaveBody` and the "^" eyes in `main.js`), with a
+thin cream rim so he shows on dark tabs: `favicon.svg`, `favicon.png` (64 px), `favicon.ico` (32 px)
+and `apple-touch-icon.png` (180 px, on the page's cream). `tools/favicon.swift` draws them all.
 
 ## Hosting
 
