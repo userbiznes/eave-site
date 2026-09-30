@@ -12,10 +12,10 @@ python3 -m http.server 5391   # then open http://127.0.0.1:5391
 The launch video has its own section under the opening (`.demo`, a frame like the hero's, `.clip`): `media/eave.mp4`
 (1920 × 1200, 16:10 like the frame) and `media/eave-small.mp4` (1280 × 800, for screens up to 700 px, by the
 `<source>`'s `media`), with `media/eave-poster.jpg` until it plays. Muted, so it can play on its own, while it's in
-view; the round button in its corner turns the sound on (effects only: no one's music). With reduced motion it
+view; the round button in its corner turns the sound on (the song Spotify played during the take, under the effects). With reduced motion it
 waits for its play button instead. The hero's frame is where the opening's window lands and shows the drawn room.
 It's made in the app's repo (`Tools/promo/`): a take, then `compose.swift` at `--width 1920 --height 1200` and
-`sound.swift --no-music`, encoded with ffmpeg (x264, CRF 21, `+faststart`).
+`sound.swift` (with the recorded song), encoded with ffmpeg (x264, CRF 21, `+faststart`).
 
 The Download links (nav, hero, footer button, footer link, and the privacy page's) point at the newest release:
 `https://github.com/userbiznes/eave-releases/releases/latest/download/Eave.dmg`, so they never need changing.
