@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eave.ardisusa.com/sitemap.xml

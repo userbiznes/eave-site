@@ -22,6 +22,15 @@ The Download links (nav, hero, footer button, footer link, and the privacy page'
 `privacy.html` is the privacy policy (its content matches what the app does; change it, and its date, when that
 changes).
 
+## Search
+
+The page's `<title>` and description name what people search for (a macOS notch app, the MacBook's notch, Spotify,
+Claude Code, clipboard). Its `<head>` also has a canonical URL, Open Graph and Twitter card tags (`media/og.jpg`,
+1200 × 630, a frame of the video, shown wherever the link is shared) and JSON-LD: the site, Ardis USA LLC, Eave as a
+`SoftwareApplication` (free, macOS 14+, its download and screenshots) and the video as a `VideoObject`.
+`robots.txt` points at `sitemap.xml` (both pages, and the video). Change the sitemap's `lastmod` when a page changes,
+and the JSON-LD's `offers` if Eave stops being free.
+
 ## Icons
 
 The favicon is Eave the way this page draws him (`eaveBody` and the "^" eyes in `main.js`), with a
