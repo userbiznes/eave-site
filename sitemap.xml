@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://eave.ardisusa.com/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://eave.ardisusa.com/media/og.jpg</video:thumbnail_loc>
+      <video:title>Eave — your MacBook’s notch, alive</video:title>
+      <video:description>Eave in use on a MacBook: the notch opens on the song that’s playing and takes its colors, then Claude Code’s stats, the clipboard, the file tray, and a Claude Code task finishing.</video:description>
+      <video:content_loc>https://eave.ardisusa.com/media/eave.mp4</video:content_loc>
+      <video:duration>26</video:duration>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://eave.ardisusa.com/privacy.html</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+</urlset>
