@@ -467,7 +467,8 @@
   const vframe = $('#vframe');
   const video = $('.video');
   if (video) {
-    if (isPlaceholder(video.getAttribute('src'))) {
+    const source = video.getAttribute('src') || video.querySelector('source')?.getAttribute('src');
+    if (isPlaceholder(source)) {
       video.removeAttribute('src');
       video.load();
       vframe.classList.add('is-missing');
@@ -476,6 +477,16 @@
       if (video.readyState >= 2) ready();
       else video.addEventListener('loadeddata', ready, { once: true });
       video.addEventListener('error', () => vframe.classList.add('is-missing'));
+      // Browsers only autoplay without sound: a button turns it on.
+      const sound = $('.sound');
+      if (sound) {
+        sound.addEventListener('click', () => {
+          video.muted = !video.muted;
+          if (!video.muted) video.play().catch(() => {});
+          sound.setAttribute('aria-pressed', String(!video.muted));
+          sound.setAttribute('aria-label', video.muted ? 'Turn sound on' : 'Turn sound off');
+        });
+      }
       if ('IntersectionObserver' in window) {
         new IntersectionObserver(([e]) => {
           if (e.isIntersecting) video.play().catch(() => {});

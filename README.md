@@ -7,11 +7,14 @@ fonts (Instrument Serif, Geist, Geist Mono) load from CDNs.
 python3 -m http.server 5391   # then open http://127.0.0.1:5391
 ```
 
-## Placeholders
+## The video
 
-| Placeholder | Where | What |
-| --- | --- | --- |
-| Video | `index.html`, the `<video>` in `.vframe` | No video yet: give it a `src` (muted, looped). Until then the drawn room with Eave is its poster. |
+The hero's `<video>` (in `.vframe`) is the launch video: `media/eave.mp4` (1920 × 1200, 16:10 like the frame) and
+`media/eave-small.mp4` (1280 × 800, for screens up to 700 px, by the `<source>`'s `media`). Muted and looped, so
+browsers autoplay it; the round button in its corner turns the sound on (effects only: no one's music). The drawn
+room with Eave is its poster until it loads. It's made in the app's repo (`Tools/promo/`): a take, then
+`compose.swift` at `--width 1920 --height 1200` and `sound.swift --no-music`, encoded with ffmpeg (x264, CRF 21,
+`+faststart`).
 
 The Download links (nav, hero, footer button, footer link, and the privacy page's) point at the newest release:
 `https://github.com/userbiznes/eave-releases/releases/latest/download/Eave.dmg`, so they never need changing.

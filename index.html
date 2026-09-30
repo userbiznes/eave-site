@@ -43,7 +43,13 @@
       <div class="vframe" id="vframe">
         <div class="vscreen">
           <div class="room" data-room aria-hidden="true"></div>
-          <video class="video" autoplay muted loop playsinline preload="auto" aria-label="Eave in use: the notch showing music, Claude Code usage and the clipboard"></video>
+          <video class="video" autoplay muted loop playsinline preload="auto" aria-label="Eave in use: the notch opens on the song that’s playing and takes its colors, then Claude Code’s stats, the clipboard, the file tray, and a Claude Code task finishing">
+            <source src="media/eave-small.mp4" type="video/mp4" media="(max-width: 700px)">
+            <source src="media/eave.mp4" type="video/mp4">
+          </video>
+          <button class="sound" type="button" aria-pressed="false" aria-label="Turn sound on">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path class="speaker" d="M3.5 7.6h2.6L10 4.5v11l-3.9-3.1H3.5z"/><path class="waves" d="M12.6 7.4a3.6 3.6 0 0 1 0 5.2M14.7 5.4a6.4 6.4 0 0 1 0 9.2"/><path class="mute" d="m12.8 7.6 4.6 4.8m0-4.8-4.6 4.8"/></svg>
+          </button>
         </div>
       </div>
       <div class="hero-cta">
