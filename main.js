@@ -464,35 +464,34 @@
 
   // ---------- placeholders: [VIDEO_URL], [SCREENSHOTS], [DOWNLOAD_URL] ----------
 
+  // The hero's frame, where the opening's window lands (it shows the drawn room).
   const vframe = $('#vframe');
-  const video = $('.video');
-  if (video) {
-    const source = video.getAttribute('src') || video.querySelector('source')?.getAttribute('src');
-    if (isPlaceholder(source)) {
-      video.removeAttribute('src');
-      video.load();
-      vframe.classList.add('is-missing');
+
+  // The launch video, under the intro: it plays while it's in view (muted, so browsers allow
+  // it), and its button turns the sound on. With reduced motion it waits for a press of play.
+  const clip = $('.clip');
+  if (clip) {
+    const video = clip.querySelector('video');
+    const sound = clip.querySelector('.sound');
+    const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (still) {
+      video.controls = true;
+      sound.remove();
     } else {
-      const ready = () => vframe.classList.add('has-video');
-      if (video.readyState >= 2) ready();
-      else video.addEventListener('loadeddata', ready, { once: true });
-      video.addEventListener('error', () => vframe.classList.add('is-missing'));
-      // Browsers only autoplay without sound: a button turns it on.
-      const sound = $('.sound');
-      if (sound) {
-        sound.addEventListener('click', () => {
-          video.muted = !video.muted;
-          if (!video.muted) video.play().catch(() => {});
-          sound.setAttribute('aria-pressed', String(!video.muted));
-          sound.setAttribute('aria-label', video.muted ? 'Turn sound on' : 'Turn sound off');
-        });
-      }
       if ('IntersectionObserver' in window) {
         new IntersectionObserver(([e]) => {
           if (e.isIntersecting) video.play().catch(() => {});
           else video.pause();
-        }).observe(vframe);
+        }, { threshold: 0.35 }).observe(clip);
+      } else {
+        video.autoplay = true;
       }
+      sound.addEventListener('click', () => {
+        video.muted = !video.muted;
+        if (!video.muted) video.play().catch(() => {});
+        sound.setAttribute('aria-pressed', String(!video.muted));
+        sound.setAttribute('aria-label', video.muted ? 'Turn sound on' : 'Turn sound off');
+      });
     }
   }
 
