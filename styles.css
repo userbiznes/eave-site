@@ -154,31 +154,6 @@ a { color: inherit; }
   container-type: size;
   background: #E9C68A;
 }
-.video {
-  position: absolute; inset: 0; z-index: 2;
-  width: 100%; height: 100%; object-fit: cover;
-  opacity: 0; transition: opacity 0.8s ease;
-}
-.vframe.has-video .video { opacity: 1; }
-.sound {
-  position: absolute; right: 12px; bottom: 12px; z-index: 3;
-  display: grid; place-items: center;
-  width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%;
-  background: rgba(247, 241, 230, 0.86);
-  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-  box-shadow: 0 0 0 1px rgba(47, 54, 82, 0.12), 0 4px 14px rgba(21, 26, 43, 0.25);
-  color: var(--navy); cursor: pointer;
-  opacity: 0; pointer-events: none;
-  transition: opacity 0.6s ease 0.4s, transform 0.2s ease, background 0.2s ease;
-}
-.vframe.has-video .sound { opacity: 1; pointer-events: auto; }
-.sound:hover { background: rgba(251, 246, 236, 0.96); transform: scale(1.06); }
-.sound:active { transform: scale(0.96); }
-.sound svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-.sound .speaker { fill: currentColor; stroke-width: 1.2; }
-.sound .waves { display: none; }
-.sound[aria-pressed="true"] .waves { display: block; }
-.sound[aria-pressed="true"] .mute { display: none; }
 .ph-tag {
   position: absolute; left: 12px; bottom: 12px; z-index: 3;
   display: none;
@@ -374,6 +349,44 @@ html:not(.js) .opening { display: none; }
 }
 
 /* ---------- lead ---------- */
+
+.demo {
+  display: flex; justify-content: center;
+  padding: clamp(56px, 9vw, 120px) 16px 0;
+}
+.clip {
+  position: relative; box-sizing: border-box;
+  width: min(100%, 1100px);
+  aspect-ratio: 16 / 10;
+  padding: var(--bez);
+  border-radius: var(--frame-r);
+  background: var(--bezel);
+  box-shadow: var(--frame-shadow);
+}
+.clip-screen {
+  position: relative; width: 100%; height: 100%;
+  border-radius: calc(var(--frame-r) - var(--bez));
+  overflow: hidden; isolation: isolate;
+  background: #1B1A33;
+}
+.clip video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.sound {
+  position: absolute; right: calc(var(--bez) + 12px); bottom: calc(var(--bez) + 12px); z-index: 3;
+  display: grid; place-items: center;
+  width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%;
+  background: rgba(247, 241, 230, 0.86);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  box-shadow: 0 0 0 1px rgba(47, 54, 82, 0.12), 0 4px 14px rgba(21, 26, 43, 0.25);
+  color: var(--navy); cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.sound:hover { background: rgba(251, 246, 236, 0.96); transform: scale(1.06); }
+.sound:active { transform: scale(0.96); }
+.sound svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.sound .speaker { fill: currentColor; stroke-width: 1.2; }
+.sound .waves { display: none; }
+.sound[aria-pressed="true"] .waves { display: block; }
+.sound[aria-pressed="true"] .mute { display: none; }
 
 .lead { padding-block: clamp(96px, 13vw, 170px) 0; }
 .lead-text {
