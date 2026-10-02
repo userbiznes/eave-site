@@ -102,7 +102,7 @@
 
 <main>
   <h1>Privacy</h1>
-  <p class="updated">Last updated September 28, 2026</p>
+  <p class="updated">Last updated October 2, 2026</p>
 
   <p class="lede">Eave is a Mac app made by Ardis USA LLC. It has no accounts, no ads and no analytics, and we don’t sell or share anything about you. This page lists everything Eave keeps on your Mac and every time it talks to the internet.</p>
 
@@ -120,13 +120,14 @@
     <li><strong>Updates.</strong> Once a day Eave checks GitHub for a new version (you can turn this off in Settings › About). The request says which version of Eave you have and nothing about you; GitHub sees your IP address, as any website would.</li>
     <li><strong>Your member number.</strong> Once, Eave asks our counter (a Cloudflare Worker) for the next member number, sending only a random code made on your Mac, so asking twice gives the same number. The counter keeps that code and its number, nothing else. Your IP address is used for a minute to stop floods of requests and isn’t stored.</li>
     <li><strong>Spotify.</strong> Eave controls the Spotify app on your Mac directly and loads album art from Spotify. If you set up adding songs to playlists, Eave talks to Spotify’s Web API with your own Spotify app and sign-in; nothing passes through us.</li>
+    <li><strong>Apple Music.</strong> Eave controls the Music app on your Mac directly, and adds songs to your playlists through it, with no sign-in. When a song streamed from Apple Music comes without album art of its own, Eave asks Apple’s catalog (the iTunes Search API) for its album’s art, sending only the artist and album name; Apple sees your IP address, as any website would.</li>
     <li><strong>Link previews.</strong> When you copy a link, Eave loads that page’s title and image from the website itself, as your browser would. You can turn this off in Settings › Privacy.</li>
     <li><strong>Crash reports.</strong> If Eave crashes, it asks the next time it opens whether you’d like to email us the report macOS wrote. It opens in your mail app so you can read it first, and nothing is sent unless you send it.</li>
     <li><strong>Email.</strong> If you write to us, we use your message only to reply.</li>
   </ul>
 
   <h2>Permissions</h2>
-  <p>Eave asks macOS for <strong>Accessibility</strong>, only to paste clipboard items for you, and for <strong>Automation</strong> of Spotify, only to play, pause and skip. You can take either back in System Settings › Privacy &amp; Security.</p>
+  <p>Eave asks macOS for <strong>Accessibility</strong>, to paste clipboard items for you and to show the volume and brightness keys in the notch. For those keys it watches only the media keys (volume up and down, mute, brightness up and down); it never sees anything you type, and it keeps nothing. It sets the volume and your display’s brightness itself, as the keys would. Eave also asks for <strong>Automation</strong> of Spotify and Music, only to play, pause and skip, and to add songs to your Music playlists. You can take any of these back in System Settings › Privacy &amp; Security.</p>
 
   <h2>Removing Eave</h2>
   <p>Disconnect Claude Code in Settings › Connections first, so its settings go back to how they were. Then quit Eave, delete it from Applications, and delete <code>~/Library/Application Support/Eave</code> and <code>~/Library/Preferences/com.ardisusa.eave.plist</code> to remove everything it kept.</p>

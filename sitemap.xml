@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://eave.ardisusa.com/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <video:video>
       <video:thumbnail_loc>https://eave.ardisusa.com/media/og.jpg</video:thumbnail_loc>
       <video:title>Eave — your MacBook’s notch, alive</video:title>
@@ -13,6 +13,6 @@
   </url>
   <url>
     <loc>https://eave.ardisusa.com/privacy.html</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
   </url>
 </urlset>
