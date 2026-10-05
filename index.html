@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Eave — macOS Notch App: Music, Claude Code, Clipboard</title>
-<meta name="description" content="Eave is a macOS notch app that turns your MacBook’s notch into a living hub: Spotify now playing, Claude Code usage, clipboard history and a file tray with AirDrop.">
+<meta name="description" content="Eave is a macOS notch app that turns your MacBook’s notch into a living hub: Spotify or Apple Music now playing, Claude Code usage, clipboard history, a file tray with AirDrop, and volume and brightness right in the notch.">
 <link rel="canonical" href="https://eave.ardisusa.com/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Eave">
 <meta property="og:url" content="https://eave.ardisusa.com/">
 <meta property="og:title" content="Eave — your MacBook’s notch, alive">
-<meta property="og:description" content="A macOS notch app: the song that’s playing, your Claude Code usage, clipboard history and a file tray with AirDrop, right in the notch.">
+<meta property="og:description" content="A macOS notch app: the song that’s playing on Spotify or Apple Music, your Claude Code usage, clipboard history, a file tray with AirDrop, and volume and brightness, right in the notch.">
 <meta property="og:image" content="https://eave.ardisusa.com/media/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -22,7 +22,7 @@
 <meta property="og:video:height" content="1200">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Eave — your MacBook’s notch, alive">
-<meta name="twitter:description" content="A macOS notch app: now playing, Claude Code usage, clipboard history and a file tray with AirDrop.">
+<meta name="twitter:description" content="A macOS notch app: now playing from Spotify or Apple Music, Claude Code usage, clipboard history, a file tray with AirDrop, volume and brightness.">
 <meta name="twitter:image" content="https://eave.ardisusa.com/media/og.jpg">
 <script type="application/ld+json">
 {
@@ -59,14 +59,18 @@
         "https://eave.ardisusa.com/screens/claude-code.jpg",
         "https://eave.ardisusa.com/screens/clipboard.jpg",
         "https://eave.ardisusa.com/screens/file-tray.jpg",
-        "https://eave.ardisusa.com/screens/spaces.jpg"
+        "https://eave.ardisusa.com/screens/spaces.jpg",
+        "https://eave.ardisusa.com/screens/volume.jpg",
+        "https://eave.ardisusa.com/screens/hello.jpg"
       ],
       "featureList": [
-        "Now playing from Spotify in the MacBook notch",
+        "Now playing from Spotify or Apple Music in the MacBook notch",
         "Claude Code usage, alerts and a year of stats",
         "Clipboard history",
         "File tray with AirDrop",
-        "Customizable spaces with themes from the album art"
+        "Customizable spaces with themes from the album art",
+        "Volume and brightness in the notch, in place of macOS’s box",
+        "A handwritten hello when you unlock your Mac"
       ],
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
       "publisher": { "@id": "https://ardisusa.com/#organization" },
@@ -186,7 +190,7 @@
           <h2 class="index-label" id="connectors">Connectors</h2>
           <ul aria-labelledby="connectors">
             <li><a class="index-item" href="#now-playing"><svg class="logo" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>Spotify</a></li>
-            <li><span class="index-item is-soon"><svg class="logo" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.801.42.127.856.187 1.293.228.555.053 1.11.06 1.667.06h11.03a12.5 12.5 0 001.57-.1c.822-.106 1.596-.35 2.295-.81a5.046 5.046 0 001.88-2.207c.186-.42.293-.87.37-1.324.113-.675.138-1.358.137-2.04-.002-3.8 0-7.595-.003-11.393zm-6.423 3.99v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.045-1.773-.6-1.943-1.536a1.88 1.88 0 011.038-2.022c.323-.16.67-.25 1.018-.324.378-.082.758-.153 1.134-.24.274-.063.457-.23.51-.516a.904.904 0 00.02-.193c0-1.815 0-3.63-.002-5.443a.725.725 0 00-.026-.185c-.04-.15-.15-.243-.304-.234-.16.01-.318.035-.475.066-.76.15-1.52.303-2.28.456l-2.325.47-1.374.278c-.016.003-.032.01-.048.013-.277.077-.377.203-.39.49-.002.042 0 .086 0 .13-.002 2.602 0 5.204-.003 7.805 0 .42-.047.836-.215 1.227-.278.64-.77 1.04-1.434 1.233-.35.1-.71.16-1.075.172-.96.036-1.755-.6-1.92-1.544-.14-.812.23-1.685 1.154-2.075.357-.15.73-.232 1.108-.31.287-.06.575-.116.86-.177.383-.083.583-.323.6-.714v-.15c0-2.96 0-5.922.002-8.882 0-.123.013-.25.042-.37.07-.285.273-.448.546-.518.255-.066.515-.112.774-.165.733-.15 1.466-.296 2.2-.444l2.27-.46c.67-.134 1.34-.27 2.01-.403.22-.043.442-.088.663-.106.31-.025.523.17.554.482.008.073.012.148.012.223.002 1.91.002 3.822 0 5.732z"/></svg>Apple Music <span class="soon">Coming soon</span></span></li>
+            <li><a class="index-item" href="#now-playing"><svg class="logo" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.801.42.127.856.187 1.293.228.555.053 1.11.06 1.667.06h11.03a12.5 12.5 0 001.57-.1c.822-.106 1.596-.35 2.295-.81a5.046 5.046 0 001.88-2.207c.186-.42.293-.87.37-1.324.113-.675.138-1.358.137-2.04-.002-3.8 0-7.595-.003-11.393zm-6.423 3.99v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.045-1.773-.6-1.943-1.536a1.88 1.88 0 011.038-2.022c.323-.16.67-.25 1.018-.324.378-.082.758-.153 1.134-.24.274-.063.457-.23.51-.516a.904.904 0 00.02-.193c0-1.815 0-3.63-.002-5.443a.725.725 0 00-.026-.185c-.04-.15-.15-.243-.304-.234-.16.01-.318.035-.475.066-.76.15-1.52.303-2.28.456l-2.325.47-1.374.278c-.016.003-.032.01-.048.013-.277.077-.377.203-.39.49-.002.042 0 .086 0 .13-.002 2.602 0 5.204-.003 7.805 0 .42-.047.836-.215 1.227-.278.64-.77 1.04-1.434 1.233-.35.1-.71.16-1.075.172-.96.036-1.755-.6-1.92-1.544-.14-.812.23-1.685 1.154-2.075.357-.15.73-.232 1.108-.31.287-.06.575-.116.86-.177.383-.083.583-.323.6-.714v-.15c0-2.96 0-5.922.002-8.882 0-.123.013-.25.042-.37.07-.285.273-.448.546-.518.255-.066.515-.112.774-.165.733-.15 1.466-.296 2.2-.444l2.27-.46c.67-.134 1.34-.27 2.01-.403.22-.043.442-.088.663-.106.31-.025.523.17.554.482.008.073.012.148.012.223.002 1.91.002 3.822 0 5.732z"/></svg>Apple Music</a></li>
             <li><a class="index-item" href="#claude-code"><svg class="logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="16" rx="3.5"/><path d="M7 9.5l3 2.5-3 2.5M12.5 15h4.5"/></svg>Claude Code</a></li>
             <li><span class="index-item is-soon"><svg class="logo" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path clip-rule="evenodd" d="M8.086.457a6.105 6.105 0 013.046-.415c1.333.153 2.521.72 3.564 1.7a.117.117 0 00.107.029c1.408-.346 2.762-.224 4.061.366l.063.03.154.076c1.357.703 2.33 1.77 2.918 3.198.278.679.418 1.388.421 2.126a5.655 5.655 0 01-.18 1.631.167.167 0 00.04.155 5.982 5.982 0 011.578 2.891c.385 1.901-.01 3.615-1.183 5.14l-.182.22a6.063 6.063 0 01-2.934 1.851.162.162 0 00-.108.102c-.255.736-.511 1.364-.987 1.992-1.199 1.582-2.962 2.462-4.948 2.451-1.583-.008-2.986-.587-4.21-1.736a.145.145 0 00-.14-.032c-.518.167-1.04.191-1.604.185a5.924 5.924 0 01-2.595-.622 6.058 6.058 0 01-2.146-1.781c-.203-.269-.404-.522-.551-.821a7.74 7.74 0 01-.495-1.283 6.11 6.11 0 01-.017-3.064.166.166 0 00.008-.074.115.115 0 00-.037-.064 5.958 5.958 0 01-1.38-2.202 5.196 5.196 0 01-.333-1.589 6.915 6.915 0 01.188-2.132c.45-1.484 1.309-2.648 2.577-3.493.282-.188.55-.334.802-.438.286-.12.573-.22.861-.304a.129.129 0 00.087-.087A6.016 6.016 0 015.635 2.31C6.315 1.464 7.132.846 8.086.457zm-.804 7.85a.848.848 0 00-1.473.842l1.694 2.965-1.688 2.848a.849.849 0 001.46.864l1.94-3.272a.849.849 0 00.007-.854l-1.94-3.393zm5.446 6.24a.849.849 0 000 1.695h4.848a.849.849 0 000-1.696h-4.848z"></path></svg>Codex <span class="soon">Coming soon</span></span></li>
             <li><span class="index-item is-soon"><svg class="logo" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></svg>Gemini CLI <span class="soon">Coming soon</span></span></li>
@@ -198,6 +202,8 @@
             <li><a class="index-item" href="#clipboard"><svg class="logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4.5H7.5A2.5 2.5 0 0 0 5 7v12a2.5 2.5 0 0 0 2.5 2.5h9A2.5 2.5 0 0 0 19 19V7a2.5 2.5 0 0 0-2.5-2.5H15"/><rect x="9" y="2.5" width="6" height="4" rx="1.2"/><path d="M8.5 11h7M8.5 14.5h7M8.5 18h4"/></svg>Clipboard history</a></li>
             <li><a class="index-item" href="#tray"><svg class="logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 13.5l2.2-7A2 2 0 0 1 7.6 5h8.8a2 2 0 0 1 1.9 1.5l2.2 7V18a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/><path d="M3.5 13.5H8l1.5 2.5h5l1.5-2.5h4.5"/></svg>File tray with AirDrop</a></li>
             <li><a class="index-item" href="#spaces"><svg class="logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4" width="7.5" height="7" rx="1.8"/><rect x="13" y="4" width="7.5" height="7" rx="1.8"/><rect x="3.5" y="13" width="17" height="7" rx="1.8"/></svg>Spaces you customize</a></li>
+            <li><a class="index-item" href="#volume"><svg class="logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.2L12 5.5v13l-4.8-4H4z"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18.2 6.5a8 8 0 0 1 0 11"/></svg>Volume and brightness</a></li>
+            <li><a class="index-item" href="#hello"><svg class="logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9.5" rx="2"/><path d="M8.5 11V7.5a3.5 3.5 0 0 1 6.8-1.2"/><path d="M12 15v2"/></svg>A hello when you unlock</a></li>
           </ul>
         </div>
       </div>
@@ -210,7 +216,8 @@
       <div class="feature-text">
         <p class="label"><span class="dot"></span>Now playing</p>
         <h3>The song that’s on, right where you look.</h3>
-        <p>Connect Spotify, and the closed notch shows the album art on one side and bars that move with the music on the other. Hover, and the player widget is waiting in your space.</p>
+        <p>Connect Spotify or Apple Music, and the closed notch shows the album art on one side and bars that move with the music on the other. Hover, and the player widget is waiting in your space. With both, it follows whichever one is playing.</p>
+        <p>The + adds the song to one of your playlists: Apple Music’s straight from your library, nothing to set up.</p>
       </div>
       <figure class="shot" data-scraps="marigold" style="--ar: 4 / 1">
         <div class="shot-frame"><div class="shot-screen">
@@ -278,6 +285,35 @@
       </figure>
     </article>
 
+    <article class="feature" id="volume" style="--tone: var(--navy)">
+      <div class="feature-text">
+        <p class="label"><span class="dot"></span>Volume and brightness</p>
+        <h3>The volume keys, answered by the notch.</h3>
+        <p>Press volume or brightness and the notch shows it instead of macOS’s box: the speaker or the sun on one side, a slim bar on the other that warms up as it fills. Hold the key and it follows along; a moment later it’s gone.</p>
+        <p>A Controls widget puts both sliders in a space, too.</p>
+      </div>
+      <figure class="shot" data-scraps="navy" style="--ar: 4 / 1">
+        <div class="shot-frame"><div class="shot-screen">
+          <img src="screens/volume.jpg" alt="The closed notch showing the volume: a speaker on one side and a glowing blue bar on the other" loading="lazy">
+          <div class="standin" aria-hidden="true"><span class="ph">[SCREENSHOTS]/volume.png</span><span class="ph-note">The volume in the closed notch</span></div>
+        </div></div>
+      </figure>
+    </article>
+
+    <article class="feature" id="hello" style="--tone: var(--blush)">
+      <div class="feature-text">
+        <p class="label"><span class="dot"></span>Hello</p>
+        <h3>A hello, written by hand, when you unlock.</h3>
+        <p>As the lock screen fades, the notch opens a little and writes hello, with your name if you like, in a handwriting drawn just for Eave. Then Eave peeks up from the edge, and it’s back to work. Once a day, or every time: your call.</p>
+      </div>
+      <figure class="shot" data-scraps="blush" style="--ar: 3.571 / 1">
+        <div class="shot-frame"><div class="shot-screen">
+          <img src="screens/hello.jpg" alt="The notch open below the camera, with hello, sam written in white cursive and Eave peeking up beside it" loading="lazy">
+          <div class="standin" aria-hidden="true"><span class="ph">[SCREENSHOTS]/hello.png</span><span class="ph-note">The hello on unlock</span></div>
+        </div></div>
+      </figure>
+    </article>
+
   </section>
 
   <section class="faq" id="faq" aria-labelledby="faq-title">
@@ -297,12 +333,12 @@
           <div class="answer"><p>Yes. On a display without one, Eave sits in a small pill at the top center of the screen.</p></div>
         </details>
         <details>
-          <summary>Do I need Spotify or Claude Code?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="answer"><p>No. Without them, Eave is still your clipboard history and file tray. Connect Spotify to see what’s playing, and Claude Code for usage, the heatmap and task pop-ups. You can connect them any time in Settings.</p></div>
+          <summary>Do I need Spotify, Apple Music or Claude Code?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="answer"><p>No. Without them, Eave is still your clipboard history, file tray, volume and brightness. Connect Spotify or Apple Music to see what’s playing, and Claude Code for usage, the heatmap and task pop-ups. You can connect them any time in Settings.</p></div>
         </details>
         <details>
           <summary>Why isn’t it on the Mac App Store?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="answer"><p>Eave needs a few things the App Store’s sandbox doesn’t allow, like talking to the Spotify app, so you download it from here. It’s signed and notarized by Apple.</p></div>
+          <div class="answer"><p>Eave needs a few things the App Store’s sandbox doesn’t allow, like talking to the Spotify and Music apps and showing the volume keys, so you download it from here. It’s signed and notarized by Apple.</p></div>
         </details>
       </div>
     </div>
